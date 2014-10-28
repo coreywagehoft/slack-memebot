@@ -11,8 +11,7 @@ $trigger = trim($_POST['trigger_word']);
 $text    = trim(substr($_POST['text'], strlen($trigger) + 1));
 
 if($text == '') {
-	sendResponse("One does not simply <text> - Lord of the Rings Boromir\n" + 
-				"Y U NO <text> - Y U NO Guy");
+	sendResponse("One does not simply <text> - Lord of the Rings Boromir\nY U NO <text> - Y U NO Guy");
 }
 
 
