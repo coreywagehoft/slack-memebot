@@ -23,6 +23,16 @@ class MemeClass implements Memeable
 			return $final_text;
 		}
 
+		// I don't always
+		if (preg_match('/(i don?t always .*) (but when i do,? .*)/i',$text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['text1'] = $matches[2];
+			$final_text['template_id'] = '61532';
+
+			return $final_text;
+		}
+
 		// One does not simply
 		if(preg_match('/(one does not simply) (.*)/i', $text, $matches) === 1) {
 
@@ -33,6 +43,55 @@ class MemeClass implements Memeable
 			return $final_text;
 		}
 
+		// Not sure if FRY
+		if(preg_match('/(not sure if .*) (or .*)/i', $text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['text1'] = $matches[2];
+			$final_text['template_id'] = '61520';
+
+			return $final_text;
+		}
+
+		// Brace Yourselves
+		if(preg_match('/(brace yoursel[^\s]+) (.*)/i', $text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['text1'] = $matches[2];
+			$final_text['template_id'] = '61546';
+
+			return $final_text;
+		}
+
+		// Lumberg
+		if(preg_match('/(.*) (that would be great|that?d be great)/i', $text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['text1'] = $matches[2];
+			$final_text['template_id'] = '563423';
+
+			return $final_text;
+		}
+
+		// Yo dawg
+		if(preg_match('/(yo dawg .*) (so .*)/i', $text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['text1'] = $matches[2];
+			$final_text['template_id'] = '101716';
+
+			return $final_text;
+		}
+
+		// Yo dawg
+		if(preg_match('/(what if i told you) (.*)/i', $text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['text1'] = $matches[2];
+			$final_text['template_id'] = '100947';
+
+			return $final_text;
+		}
 	}
 
 	public function generateMeme($text)
